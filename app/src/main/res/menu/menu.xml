@@ -6,6 +6,6 @@
         android:title="History" />
     <item android:title="Top Players"
         android:id="@+id/topPlayers"/>
-    <item android:title="setting"
+    <item android:title="Setting"
         android:id="@+id/settings"/>
 </menu>

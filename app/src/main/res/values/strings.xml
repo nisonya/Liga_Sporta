@@ -2,4 +2,18 @@
     <string name="app_name">Лига Спорта</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="history1">\t\tThe history of football (or soccer if you are in the USA) is a complex one, but what is it you really need to know about one of the world’s most-loved and supported sports? We’ve detailed some of the key facts about football’s history so you can understand how the sport has developed since day dot. \n\n
+    <b>\t\tWHERE IT ALL STARTED\n</b>
+    \t\tThe origins of football can be split into two categories: contemporary history and classical history.\n\n
+<b>\t\tTHE CONTEMPORARY HISTORY: WHERE AND WHEN WAS FOOTBALL INVENTED?\n</b>
+    \t\tFootball’s modern origins began in England more than 100 years ago, in 1863. Rugby football and association football, once the same thing, went their separate ways and the Football Association, the first official governing body for the sport, was established.\n\n
+    <b>\t\tGOING BACK IN TIME \n</b>
+        \t\tHistory books dictate that people having had a brilliant time kicking a ball around for thousands of years, but not all those games would be recognisable as what we consider football today. But the different periods of football, or sports involving kicking a ball in more accurate terms, were all crucial to the development of the game. Without the variation experienced over the years, we may have never had football by modern standards.\n
+
+\t\tThe furthest back we can track football’s history is to China, as early as the third century BC, where there are mentions of a game resembling football in military manuals. The Han Dynasty played a game called Tsu’ Chu, which involved kicking a ball through a 30-40cm opening and into what we’d now see as a goal make of canes with a net attached to it. The ball used during these games was made from leather and filled with hair and feathers.\n
+
+\t\tThe Greek’s invented ‘Harpastum’, a game which used a ball smaller than that used in football but that had similar rules to the modern game. Play was on a rectangular field marked by boundaries and a centre line and the aim was for one team to get the ball over their competitor’s boundary line.\n\n
+
+\t\tBased on what we know about the history of ball games where use of feet dominates, we can see clearly the affect different cultures and variations have had on the game we play today.\n
+    </string>
 </resources>
