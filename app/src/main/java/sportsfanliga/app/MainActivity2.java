@@ -180,13 +180,13 @@ public class MainActivity2 extends AppCompatActivity {
             Fragment fragment = new History();;
             switch (item.getItemId()) {
                 case R.id.settings:
-                    //fragment = new StopwatchFragment();
+                    fragment = new SettingsFragment();
                     break;
                 case R.id.topPlayers:
-                    //fragment = new NewTrainingFragment();
+                    fragment = new TopPlayers();
                     break;
                 case R.id.history:
-                    //fragment = new HistoryFragment();
+                    fragment = new History();
                     break;
             }
             FragmentManager fragmentManager = getSupportFragmentManager();
@@ -204,5 +204,12 @@ public class MainActivity2 extends AppCompatActivity {
         ed.apply();
         browse(url_FB);
     }
+    public void chipclicked(View view) {
+        String selectedText ="";
+        if (view instanceof Chip) {
+            selectedText = ((Chip) view).getText().toString();}
+        TopPlayers.getPlayers(selectedText);
 
+        System.out.println("chip");
+    }
 }
