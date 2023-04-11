@@ -2,6 +2,8 @@
     <string name="app_name">Лига Спорта</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="size_for_main">24sp</string>
+    <string name="size_for_else">16sp</string>
     <string name="history1">\t\tThe history of football (or soccer if you are in the USA) is a complex one, but what is it you really need to know about one of the world’s most-loved and supported sports? We’ve detailed some of the key facts about football’s history so you can understand how the sport has developed since day dot. \n\n
     <b>\t\tWHERE IT ALL STARTED\n</b>
     \t\tThe origins of football can be split into two categories: contemporary history and classical history.\n\n
@@ -14,6 +16,30 @@
 
 \t\tThe Greek’s invented ‘Harpastum’, a game which used a ball smaller than that used in football but that had similar rules to the modern game. Play was on a rectangular field marked by boundaries and a centre line and the aim was for one team to get the ball over their competitor’s boundary line.\n\n
 
-\t\tBased on what we know about the history of ball games where use of feet dominates, we can see clearly the affect different cultures and variations have had on the game we play today.\n
+\t\tBased on what we know about the history of ball games where use of feet dominates, we can see clearly the affect different cultures and variations have had on the game we play today.\n\n
+    <b>\t\tBRITAIN AND FOOTBALL</b>
+    </string>
+    <string name="history2">\t\tRecords show that, in 1314, the Lord Mayor of London banned football in the city due to it causing ‘chaos’. If you were caught playing the game in London, you could be imprisoned. This was elaborated on during the 100 years England and France were at war, when Kings Edward II, Richard II, Hentry IV and Henry V made the game illegal throughout the UK due to it ‘taking away focus from practising military disciplines’, which were deemed more useful.\n
+
+\t\tDespite opposition for the game, football thrived in Britain from the eight to 19th centuries, however, a standardised version of the game was still a rarity as regional versions often gained favour. These different versions of the game were neatened up to eventually become association football, rugby football and Gaelic football, all of which contributed to the contemporary equivalent of the game we play today.\n
+
+\t\tWhen thinking of the Sunday leagues we now play, the best iteration is village vs village games where villages gathered and their teams played against each other, usually on unmarked fields.\n\n
+
+    <b>\t\tTHE STANDARDISATION OF THE BALL\n</b>
+        \t\tEven though the official rules of modern football were dictated in 1863 when the Football Association was established, the specifications of the ball were not standardised for another eight years. Up until then, both parties playing would agree what ball was to be used amongst themselves.\n\n
+    <b>\t\tWHY IS A MATCH 90 MINS LONG?\n</b>
+        \t\tThe standard length of game in football is 90 minutes. This duration was established for the first time in 1866 when London and Sheffield played against one another. For one reason or another, from here onward, 90 minutes was set as the standard duration for football games. Although, modern underage games do not use the 90-minute format.\n\n
+        <b>\t\tFOOTBALL, THE GLOBAL PHENOMENON\n</b>
+        \t\tIt wasn’t until the start of the 19th century that playing football in schools became the norm, starting in public schools. While rules did not differ greatly to the standard, many schools would come up with their own variation of the game depending on the grounds they had available. For example, if a school only had a concrete playground, which was true of many schools, they had to work with what they had and would adapt the boundaries accordingly.\n
+
+\t\tEight years after it was founded, The Football Association had established 50 member clubs. That’s when, in 1872, the FA Cup was born, with the first championship in the works by 1888. At this time, Europe still hadn’t embraced the contemporary variant of football, which helped to define football as a ‘very British sport.’ However, preceding this in 1872 was the first ‘international’ football match between England and Scotland which attracted enormous crowds, much like today’s games.\n
+
+\t\tThe spread of football outside the UK was slow at first, but it soon reached every corner of the world. The Netherlands and Denmark formed their own football associations in 1889, followed by New Zealand in 1891, Argentina in 1893, and Chile, Switzerland and Belgium in 1895. Italy was next, forming its association in 1898. Behind it was Germany and Uruguay in 1900. The next decade would see Hungary and Finland form associations, too.\n\n
+        <b>\t\tTHE FOUNDING OF FIFA\n</b>
+        \t\tThe Fédération Internationale de Football Association (FIFA) was established in Paris in 1904. Its founding members included Belgium, France, Denmark, the Netherlands, Spain, Sweden and Switzerland. Stanley Rous, who went on to become FIFA President, wrote the laws of football and put rational to them in 1886. They were re-drafted in 1997.\n
+
+\t\tBy the 1950s, after the Second World War, there were more than 73 FIFA members.\n\n
+        <b>\t\tHOW MANY FOOTBALL CLUBS ARE THERE IN THE WORLD?\n</b>
+        \t\t At the end of the 2007 FIFA Congress, FIFA had 208 members throughout the world. It’s almost impossible to tell how many football clubs there are in the world, but we can tell you that there are more than 600 clubs in England alone. The mathematics say that there are hundreds of thousands of clubs worldwide, and that number’s ever increasing.\n
     </string>
 </resources>
