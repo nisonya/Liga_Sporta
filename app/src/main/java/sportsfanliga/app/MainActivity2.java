@@ -17,12 +17,20 @@ import android.net.NetworkInfo;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.PopupWindow;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.chip.Chip;
+import com.google.android.material.slider.Slider;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings;
 
@@ -32,7 +40,7 @@ import sportsfanliga.app.databinding.ActivityMain2Binding;
 
 public class MainActivity2 extends AppCompatActivity {
 
-    ActivityMain2Binding binding;
+    static ActivityMain2Binding binding;
     private static final String FILE_NAME="MY_FILE_NAME";
     private static final String URL_STRING="URL_STRING";
     String url_FB;
@@ -175,9 +183,8 @@ public class MainActivity2 extends AppCompatActivity {
     public void plug(){
         binding = ActivityMain2Binding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
-            Fragment fragment = new History();;
+            Fragment fragment = new History();
             switch (item.getItemId()) {
                 case R.id.settings:
                     fragment = new SettingsFragment();
@@ -210,6 +217,42 @@ public class MainActivity2 extends AppCompatActivity {
             selectedText = ((Chip) view).getText().toString();}
         TopPlayers.getPlayers(selectedText);
 
-        System.out.println("chip");
     }
+    public void changeTheme(View view) {
+        switch (view.getId()) {
+
+            case R.id.dayBtn:
+                System.out.println("day");
+                //sPrefTheme = getSharedPreferences(FILE_NAME1,MODE_PRIVATE);
+                //edTheme = sPrefTheme.edit();
+                //edTheme.putString(MODE_THEME, "1");
+                //ed.apply();
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+
+                break;
+
+            case R.id.nightBtn:
+                System.out.println("night");
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                SharedPreferences sPrefTheme = getSharedPreferences("MY_FILE",MODE_PRIVATE);
+                String textSize = sPrefTheme.getString("SIZE_THEME","");
+                switch (Integer.valueOf(textSize)) {
+                    case 0:
+                        setTheme(R.style.Theme_ЛигаСпорта_Small);
+                        break;
+                    case 1:
+                        setTheme(R.style.Theme_ЛигаСпорта);
+                        break;
+                    case 2:
+                        setTheme(R.style.Theme_ЛигаСпорта_Big);
+                        break;
+                    case 3:
+                        setTheme(R.style.Theme_ЛигаСпорта_Biggest);
+                        break;
+                }
+                break;
+        }
+        binding.bottomNavigationView.setSelectedItemId(R.id.settings);
+    }
+
 }

@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/fragmentSett"
     android:layout_height="match_parent"
     tools:context=".SettingsFragment">
 
@@ -13,15 +14,16 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Settings"
-        android:textSize="24sp"
-        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.045"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="?attr/android:textSize"
+        android:theme="@style/Theme.Night"
+        android:textColor="?android:colorPrimary"/>
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/ivTheme"
         android:layout_width="52dp"
         android:layout_height="56dp"
         android:layout_marginStart="36dp"
@@ -36,10 +38,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:text="Set theme"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintStart_toEndOf="@+id/imageView4"
-        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        android:textSize="?attr/android:textSize"
+        app:layout_constraintBottom_toBottomOf="@+id/ivTheme"
+        app:layout_constraintStart_toEndOf="@+id/ivTheme"
+        app:layout_constraintTop_toTopOf="@+id/ivTheme"
         app:layout_constraintVertical_bias="0.486" />
 
     <RadioGroup
@@ -49,29 +51,33 @@
         android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4">
+        app:layout_constraintTop_toBottomOf="@+id/ivTheme">
 
         <RadioButton
             android:id="@+id/dayBtn"
+            android:textSize="?attr/android:textSize"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="changeTheme"
             android:text="Day" />
 
         <RadioButton
             android:id="@+id/nightBtn"
+            android:textSize="?attr/android:textSize"
+            android:onClick="changeTheme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Night" />
     </RadioGroup>
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/ivText"
         android:layout_width="53dp"
         android:layout_height="75dp"
         android:layout_marginTop="156dp"
         android:src="@drawable/ic_baseline_format_size_24"
-        app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        app:layout_constraintStart_toStartOf="@+id/ivTheme"
+        app:layout_constraintTop_toBottomOf="@+id/ivTheme" />
 
     <TextView
         android:id="@+id/textView6"
@@ -79,25 +85,27 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:text="Set text size"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
-        app:layout_constraintTop_toTopOf="@+id/imageView5"
+        android:textSize="?attr/android:textSize"
+        app:layout_constraintBottom_toBottomOf="@+id/ivText"
+        app:layout_constraintStart_toEndOf="@+id/ivText"
+        app:layout_constraintTop_toTopOf="@+id/ivText"
         app:layout_constraintVertical_bias="0.589" />
     <!-- Discrete slider -->
     <com.google.android.material.slider.Slider
+        android:id="@+id/slider"
         android:layout_width="289dp"
         android:layout_height="26dp"
         android:layout_marginTop="36dp"
-        android:stepSize="10.0"
-        android:value="20.0"
+        android:stepSize="1.0"
+        android:value="1.0"
         android:valueFrom="0.0"
-        android:valueTo="50.0"
+        android:valueTo="3.0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        app:thumbColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/ivText"
+        android:theme="@style/Theme.Night"
+        app:thumbColor="?android:colorPrimary"
         app:trackColorInactive="@color/grey"
-        app:trackColorActive="@color/black"/>
+        app:trackColorActive="?android:colorPrimary"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

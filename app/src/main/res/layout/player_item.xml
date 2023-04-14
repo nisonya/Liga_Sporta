@@ -31,7 +31,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:text="TextView"
-                android:textColor="@color/black"
+                android:theme="@style/Theme.Night"
+                android:textColor="?android:colorPrimary"
                 android:textSize="16sp"
                 tools:ignore="TouchTargetSizeCheck" />
 
@@ -76,7 +77,8 @@
                 android:id="@+id/valueTV"
                 android:gravity ="center"
                 android:textSize="22sp"
-                android:textColor="@color/black"
+                android:theme="@style/Theme.Night"
+                android:textColor="?android:colorPrimary"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TextView" />

@@ -34,7 +34,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/history1"
-                android:textSize="16sp"/>
+                android:textSize="?attr/android:textSize"/>
 
             <ImageView
                 android:id="@+id/imageView2"
@@ -46,7 +46,7 @@
 
             <TextView
                 android:id="@+id/textView"
-                android:textSize="16sp"
+                android:textSize="?attr/android:textSize"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/history2" />
@@ -59,8 +59,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Football history"
-        android:textSize="24sp"
-        android:textColor="@color/black"
+        android:textSize="?attr/android:textSize"
+        android:theme="@style/Theme.Night"
+        android:textColor="?android:colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.045"
         app:layout_constraintStart_toStartOf="parent"
