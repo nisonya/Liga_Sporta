@@ -30,7 +30,7 @@ public class SettingsFragment extends Fragment {
     private static final String MODE_THEME="SIZE_THEME";
     SharedPreferences sPrefTheme;
     SharedPreferences.Editor edTheme;
-    Slider slider;
+    public static Slider slider;
     public SettingsFragment() {
         super(R.layout.fragment_settings);
     }
@@ -80,8 +80,6 @@ public class SettingsFragment extends Fragment {
 
             }
         });
-
-        getFontSize(view);
        //MainActivity2.binding.bottomNavigationView.setSelectedItemId(R.id.settings);
         //MainActivity2.binding.bottomNavigationView.setSelected();
         if(AppCompatDelegate.getDefaultNightMode()==AppCompatDelegate.MODE_NIGHT_YES){
@@ -89,12 +87,14 @@ public class SettingsFragment extends Fragment {
            rdDay.setChecked(false);
             ivText.setImageResource(R.drawable.ic_baseline_format_size_24_white);
             ivTheme.setImageResource(R.drawable.ic_baseline_brightness_4_24_white);
+            getFontSize(view);
         }
         else{
             rdNight.setChecked(false);
             rdDay.setChecked(true);
             ivText.setImageResource(R.drawable.ic_baseline_format_size_24);
             ivTheme.setImageResource(R.drawable.ic_baseline_brightness_4_24);
+            getFontSize(view);
         }
     }
     public void getFontSize(View view){
@@ -134,26 +134,27 @@ public class SettingsFragment extends Fragment {
             case 0:
                 getActivity().setTheme(R.style.Theme_ЛигаСпорта_Small);
                 edTheme.putString(MODE_THEME, "0");
-                System.out.println("0"+"&&&&&&&&&&&&&&&&&&&");
+                edTheme.apply();
                 break;
             case 1:
                 getActivity().setTheme(R.style.Theme_ЛигаСпорта);
                 edTheme.putString(MODE_THEME, "1");
-                System.out.println("1"+"&&&&&&&&&&&&&&&&&&&");
+                edTheme.apply();
                 break;
             case 2:
                 getActivity().setTheme(R.style.Theme_ЛигаСпорта_Big);
                 edTheme.putString(MODE_THEME, "2");
-                System.out.println("2"+"&&&&&&&&&&&&&&&&&&&");
+                edTheme.apply();
                 break;
             case 3:
                 getActivity().setTheme(R.style.Theme_ЛигаСпорта_Biggest);
                 edTheme.putString(MODE_THEME, "3");
-
-                System.out.println("3"+"&&&&&&&&&&&&&&&&&&&");
+                edTheme.apply();
                 break;
         }
-        edTheme.apply();
+        sPrefTheme = getActivity().getSharedPreferences(FILE_NAME1,MODE_PRIVATE);
+        String textSize = sPrefTheme.getString(MODE_THEME,"");
+        System.out.println(textSize+"@@@@@@@@@@@@@");
     }
 
 }

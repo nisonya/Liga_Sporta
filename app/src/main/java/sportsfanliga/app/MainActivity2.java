@@ -45,7 +45,7 @@ public class MainActivity2 extends AppCompatActivity {
     private static final String URL_STRING="URL_STRING";
     String url_FB;
     String url_SP;
-    SharedPreferences sPref;
+    SharedPreferences sPref, sPrefTheme;
     SharedPreferences.Editor ed;
     private FirebaseRemoteConfig mfirebaseRemoteConfig;
 
@@ -219,37 +219,22 @@ public class MainActivity2 extends AppCompatActivity {
 
     }
     public void changeTheme(View view) {
+        sPrefTheme = getSharedPreferences("MY_FILE",MODE_PRIVATE);
+        SharedPreferences.Editor edTheme = sPrefTheme.edit();
+        edTheme = sPrefTheme.edit();
+        edTheme.putString("SIZE_THEME", "1");
+        edTheme.apply();
         switch (view.getId()) {
-
             case R.id.dayBtn:
                 System.out.println("day");
-                //sPrefTheme = getSharedPreferences(FILE_NAME1,MODE_PRIVATE);
-                //edTheme = sPrefTheme.edit();
-                //edTheme.putString(MODE_THEME, "1");
-                //ed.apply();
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
                 break;
 
             case R.id.nightBtn:
                 System.out.println("night");
+                SettingsFragment.slider = view.findViewById(R.id.slider);
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-                SharedPreferences sPrefTheme = getSharedPreferences("MY_FILE",MODE_PRIVATE);
-                String textSize = sPrefTheme.getString("SIZE_THEME","");
-                switch (Integer.valueOf(textSize)) {
-                    case 0:
-                        setTheme(R.style.Theme_ЛигаСпорта_Small);
-                        break;
-                    case 1:
-                        setTheme(R.style.Theme_ЛигаСпорта);
-                        break;
-                    case 2:
-                        setTheme(R.style.Theme_ЛигаСпорта_Big);
-                        break;
-                    case 3:
-                        setTheme(R.style.Theme_ЛигаСпорта_Biggest);
-                        break;
-                }
                 break;
         }
         binding.bottomNavigationView.setSelectedItemId(R.id.settings);
